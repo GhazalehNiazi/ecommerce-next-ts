@@ -1,0 +1,27 @@
+.sidebar {
+  padding-top: 2rem;
+  max-height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* margin-left:0.3rem; */
+  padding-left: 2rem;
+}
+.item {
+  margin: 0.3rem 0;
+  padding: 1rem 0rem;
+  width: fit-content;
+  font: inherit;
+  font-weight: inherit;
+}
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  color: rgb(249, 77, 77);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}

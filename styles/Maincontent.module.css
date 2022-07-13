@@ -1,0 +1,64 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.topTitle {
+  line-height: 0.3rem;
+}
+.topTitle h3 {
+  color: rgb(126, 126, 126);
+  font-weight: 500;
+}
+.button {
+  padding: 0.5rem 2rem;
+  background-color: rgb(249, 77, 77);
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-right: 1rem;
+  font-weight: 400;
+}
+.button:hover {
+  background-color: rgb(246, 13, 13);
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heroSection {
+  width: 70%;
+ 
+}
+.images{
+    width: 90%;
+    max-height: 20rem;
+  padding: 0 7.5rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "img1  img2 img3"
+    "img1 img4 img5";
+}
+.images span{
+    margin: 1rem;
+}
+.bottomtitle{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+  }
+.bottomtitle h1{
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+.bottomImageContainer{
+    display: flex;
+    margin-right: 1rem;
+    /* max-height:70%; */
+}
