@@ -1,18 +1,19 @@
 import Link from "next/link";
 import React from "react";
 import styles from "../styles/Sidebar.module.css";
+import Button from "./Button";
 import Items from "./Items";
 
-function Sidebar() {
-  const items: string[] = ["Home", "Favorite", "Balance", "Chat", "Chat"];
-
+function Sidebar({ items, buttons }: { items: string[]; buttons: string[] }) {
   return (
     <div className={styles.sidebar}>
-      <Link href='/'>
+      <Link href="/">
         <a className={styles.title}>MABELINO.</a>
       </Link>
       <Items items={items} className={styles.item} />
-      <h4>be premium</h4>
+      {buttons.map((button) => (
+        <Button>{button}</Button>
+      ))}
     </div>
   );
 }

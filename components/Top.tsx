@@ -1,5 +1,6 @@
 import React from "react";
-import styles from '../styles/Maincontent.module.css'
+import styles from "../styles/Maincontent.module.css";
+import Button from "./Button";
 function Top() {
   return (
     <div className={styles.top}>
@@ -8,7 +9,7 @@ function Top() {
         <h3>For Your House</h3>
       </div>
       <div>
-          <button className={styles.button}>cart</button>
+        <Button>cart</Button>
       </div>
     </div>
   );
