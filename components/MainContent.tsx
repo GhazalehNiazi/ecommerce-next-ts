@@ -1,18 +1,17 @@
-import React from 'react'
-import styles from '../styles/Home.module.css';
-import Bottom from './bottom';
-import Middle from './Middle';
-import Top from './Top';
+import React from "react";
+import styles from "../styles/Home.module.css";
+import Bottom from "./Bottom";
+import Middle from "./Middle";
+import Top from "./Top";
 
 function MainContent() {
   return (
-    <div className={styles.maincontent}>
-
-      <Top/>
-      <Middle/>
-      <Bottom/>
+    <div >
+      <Top />
+      <Middle />
+      <Bottom />
     </div>
-  )
+  );
 }
 
-export default MainContent
+export default MainContent;
