@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from '../styles/Shopping.module.css';
+import styles from "../styles/Shopping.module.css";
 
 function ShoppingItem(items) {
   const {
@@ -29,7 +29,7 @@ function ShoppingItem(items) {
         <h3>{catalog}</h3>
         <h3>{price}</h3>
         <h3>{discount}</h3>
-        <h5>{available}</h5>
+        <h5>{available ? "available" : "not available"}</h5>
       </div>
     </div>
   );

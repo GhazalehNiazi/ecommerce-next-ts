@@ -1,14 +1,20 @@
 import React from "react";
-import styles from "../styles/Maincontent.module.css";
-import chair from "../public/chair.jpg";
-import Image from "next/image";
-const hotsellers = [chair, chair, chair, chair,chair];
+import styles from "../../styles/Maincontent.module.css";
 
-function Bottom() {
+import Image from "next/image";
+
+type StaticImageData = {
+  src: string;
+  height: number;
+  width: number;
+  placeholder?: string;
+};
+
+function Bottom({ hotsellers ,title}: { hotsellers: StaticImageData[] ,title:string}) {
   return (
     <div>
       <div className={styles.bottomtitle}>
-        <h1>hot sellers</h1>
+        <h1>{title.toLocaleUpperCase()}</h1>
         <h1>search</h1>
       </div>
       <div className={styles.bottomImageContainer}>

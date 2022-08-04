@@ -1,10 +1,16 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import MainContent from "../components/MainContent";
-import MainUi from "../components/MainUi";
+import MainContent from "../components/mainContent/MainContent";
+import MainUi from "../components/mainUi/MainUi";
 
-const items: string[] = ["Home", "Favorite", "account", "catalog"];
+const items: { src: string; name: string }[] = [
+  { name: "Home", src: "/" },
+  { name: "Favorite", src: "/favorite" },
+  { name: "account", src: "/login" },
+  { name: "catalog", src: "/catalog" },
+];
 const buttons: string[] = ["be premium"];
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -14,7 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <MainUi items={items} buttons={buttons}>
+      <MainUi items={items} buttons={buttons} title="MABELINO.">
         <MainContent />
       </MainUi>
     </div>

@@ -1,21 +1,22 @@
 import React from "react";
-import MainContent from "./MainContent";
 import Sidebar from "./Sidebar";
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 import Rightside from "./Rightside";
 
 function MainUi({
   items,
   buttons,
   children,
+  title,
 }: {
-  items: string[];
+  items: { src: string; name: string }[];
   buttons: string[];
   children: any;
+  title: string;
 }) {
   return (
     <div className={styles.main}>
-      <Sidebar items={items} buttons={buttons} />
+      <Sidebar items={items} buttons={buttons} title={title} />
       <Rightside>{children}</Rightside>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../styles/Maincontent.module.css";
-import Button from "./Button";
+import styles from "../../styles/Maincontent.module.css";
+import Button from "../Button";
 function Top() {
   return (
     <div className={styles.top}>
