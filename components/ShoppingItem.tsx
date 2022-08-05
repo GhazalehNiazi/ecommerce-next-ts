@@ -1,32 +1,30 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/Shopping.module.css";
-
-function ShoppingItem(items) {
+import { Product } from "./types";
+import chair from '../public/chair.jpg'
+function ShoppingItem(props) {
   const {
+    id,
     name,
-    catalog,
-    price,
-    discount,
+    genre,
     available,
-    image,
-  }: {
-    name: string;
-    catalog: string;
-    price: number;
-    discount: number;
-    available: boolean;
-    image: string;
-  } = items;
+    stock,
+    discount,
+    price,
+    colors,
+    size,
+    img,
+  }: Product = props.product;
 
   return (
     <div>
       <div className={styles.item}>
-        <Image src="/../public/lamp.jpg" width={250} height={250} />
+        {img && <Image src={chair} width={250} height={250} />}
       </div>
       <div>
         <h1>{name}</h1>
-        <h3>{catalog}</h3>
+        <h3>{genre}</h3>
         <h3>{price}</h3>
         <h3>{discount}</h3>
         <h5>{available ? "available" : "not available"}</h5>

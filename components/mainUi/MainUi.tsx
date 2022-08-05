@@ -2,14 +2,14 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import styles from "../../styles/Home.module.css";
 import Rightside from "./Rightside";
-
+import { sidebarItems } from "../types";
 function MainUi({
   items,
   buttons,
   children,
   title,
 }: {
-  items: { src: string; name: string }[];
+  items: sidebarItems[];
   buttons: string[];
   children: any;
   title: string;

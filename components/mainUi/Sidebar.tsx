@@ -3,13 +3,13 @@ import React from "react";
 import styles from "../../styles/Sidebar.module.css";
 import Button from "../Button";
 import SidebarItems from "./SidebarItem";
-
+import { sidebarItems } from "../types";
 function Sidebar({
   items,
   buttons,
   title,
 }: {
-  items: { src: string; name: string }[];
+  items:sidebarItems[];
   buttons: string[];
   title: string;
 }) {

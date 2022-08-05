@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useDispatch, useSelector } from "react-redux";
 import MainContent from "../components/mainContent/MainContent";
 import MainUi from "../components/mainUi/MainUi";
+import { actionTypes } from "../store/actionTypes";
+import { desk } from "../components/data";
+import { sofa } from "../components/data";
+import { useEffect } from "react";
 
 const items: { src: string; name: string }[] = [
   { name: "Home", src: "/" },
@@ -12,6 +17,16 @@ const items: { src: string; name: string }[] = [
 const buttons: string[] = ["be premium"];
 
 const Home: NextPage = () => {
+  const dispatch = useDispatch();
+  const selector = useSelector((state) => state);
+
+  useEffect(() => {
+    dispatch({ type: actionTypes.SET_PRODUCT, payload: desk });
+    dispatch({ type: actionTypes.SET_PRODUCT, payload: sofa });
+  }, []);
+
+  console.log(selector);
+
   return (
     <div>
       <Head>

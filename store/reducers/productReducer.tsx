@@ -1,12 +1,17 @@
 import { actionTypes } from "../actionTypes";
 
-interface Product {
+type Product = {
+  id: number;
   name: string;
-  price: number;
-  available: boolean;
-  image: string;
+  genre: string;
+  available: number;
+  stock: boolean;
   discount: number;
-}
+  price: number;
+  colors?: string[];
+  size?: string[];
+  img: string;
+};
 
 const initialState: { products: Product[] } = {
   products: [],
@@ -17,7 +22,8 @@ const productReducer = (
   action: { type: string; payload: Product }
 ) => {
   switch (action.type) {
-    case actionTypes.ADD_PRODUCT:
+    case actionTypes.SET_PRODUCT:
+      console.log('pid pidnvdkjnvksnvlksnvlks')
       return {
         products: state.products.concat(action.payload),
       };

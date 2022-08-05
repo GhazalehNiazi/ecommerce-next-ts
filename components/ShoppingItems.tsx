@@ -2,15 +2,16 @@ import React from "react";
 import Image from "next/image";
 import ShoppingItem from "./ShoppingItem";
 import styles from '../styles/Shopping.module.css';
+import { Product } from "./types";
 
-const items: {}[] = [{},{},{},{},{},{}];
+function ShoppingItems(props) {
+  console.log(props.products)
 
-function ShoppingItems() {
   return (
     <div>
       <div className={styles.itemsContainer}> 
-        {items.map((item) => (
-          <ShoppingItem items={items} />
+        {props.products.map((item:Product) => (
+          <ShoppingItem product={item} />
         ))}
       </div>
     </div>
