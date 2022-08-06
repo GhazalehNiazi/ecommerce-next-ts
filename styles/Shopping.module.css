@@ -8,4 +8,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
+  height:fit-content;
+}
+.itemDetail{
+  margin-top:-1rem;
+  font-weight: 300;
+}
+.itemDetail h3{
+  font-weight:300;
+  line-height: 0.4;
+  font-size:1rem;
+}
+.itemDetailFirstLine{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -1rem;
+
+}
+.itemDetailFirstLine h3{
+  color:gray;
+  font-size: 0.9rem;
+}
+.itemDetailFirstLine h1{
+  font-size: 1.7rem;
+}
+.itemDetailFirstLine h1:hover{
+  color: rgb(249, 77, 77);
+  cursor: pointer;
 }
