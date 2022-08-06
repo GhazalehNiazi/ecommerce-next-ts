@@ -19,12 +19,13 @@ function ShoppingItem(props) {
   }: Product = props.product;
 
   return (
-    <Link href={`${id}`}>
     <div className={styles.item}>
       <div>{img && <Image src={chair} width={250} height={250} />}</div>
       <div className={styles.itemDetail}>
         <div className={styles.itemDetailFirstLine}>
+      <Link href={`${id}`}>
           <h1>{name}</h1>
+    </Link>
           <h3>{genre}</h3>
         </div>
         <h3>{price}$</h3>
@@ -32,7 +33,6 @@ function ShoppingItem(props) {
         <h3>{available ? "available" : "not available"}</h3>
       </div>
     </div>
-    </Link>
   );
 }
 
