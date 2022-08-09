@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/Shopping.module.css";
 import { Product } from "./types";
-import chair from "../public/chair.jpg";
 import Link from "next/link";
 function ShoppingItem(props) {
   const {
@@ -20,10 +19,10 @@ function ShoppingItem(props) {
 
   return (
     <div className={styles.item}>
-      <div>{img && <Image src={chair} width={250} height={250} />}</div>
+      <div>{img && <Image src={img} width={250} height={250} />}</div>
       <div className={styles.itemDetail}>
         <div className={styles.itemDetailFirstLine}>
-      <Link href={`${id}`}>
+      <Link href={`/order/${id}`}>
           <h1>{name}</h1>
     </Link>
           <h3>{genre}</h3>
