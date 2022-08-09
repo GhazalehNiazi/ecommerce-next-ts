@@ -1,19 +1,26 @@
 import React from "react";
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
-const items: string[] = ["Home", "Favorite", "account", "catalog", "Cart"];
+import { sidebarItems } from "./types";
+const items: sidebarItems[] = [
+  { name: "Home", src: "/" },
+  { name: "Favorite", src: "" },
+  { name: "account", src: "/login" },
+  { name: "catalog", src: "/catalog" },
+  { name: "Cart", src: "/cart" },
+];
 
 function Header() {
   return (
     <div className={styles.header}>
-      <ul className={styles.ul}> 
+      <ul className={styles.ul}>
         {items.map((item) => (
-            <Link href='/'>
-          <a>{item}</a>
-            </Link>
+          <Link href={item.src}>
+            <a>{item.name}</a>
+          </Link>
         ))}
       </ul>
-      <input placeholder="search"/>
+      <input placeholder="search" />
     </div>
   );
 }
