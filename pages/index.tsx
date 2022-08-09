@@ -12,7 +12,7 @@ const items: { src: string; name: string }[] = [
   { name: "Home", src: "/" },
   { name: "Favorite", src: "/favorite" },
   { name: "account", src: "/login" },
-  { name: "catalog", src: "/catalog" },
+  { name: "category", src: "/category" },
 ];
 const buttons: string[] = ["be premium"];
 
